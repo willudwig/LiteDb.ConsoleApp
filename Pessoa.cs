@@ -21,7 +21,7 @@ namespace LiteDb.ConsoleApp
 
         public override string ToString()
         {
-            return string.Format($"ID: {Id}\nNome: {Nome}\nIdade: {Idade}\nEndereco {Endereco}\nTelefone: {Telefone}");
+            return string.Format($"ID: {Id}\nNome: {Nome}\nIdade: {Idade}\nEndereco {Endereco}\nTelefone: {Telefone}\n\n");
         }
     }
 }

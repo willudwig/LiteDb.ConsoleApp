@@ -42,7 +42,7 @@ internal class Program
     private static int GetOption()
     {
         Console.WriteLine("CADASTRO DE PESSOAS: \n\n1- Gravar\n2- Editar\n3- Obter Todas\n4- Remover\n5- Sair\n");
-        Console.Write("---> ");
+        Console.Write("--> ");
         return Convert.ToInt32(Console.ReadLine());
     }
 
@@ -122,15 +122,10 @@ internal class Program
         Console.Clear();
         Console.WriteLine("LISTA DE PESSOAS: \n\n");
         List<Pessoa> listPessoas = repository.GetPessoaList();
-        foreach (var pessoa in listPessoas)
-        {
-            Console.WriteLine($"ID:       {pessoa.Id}");
-            Console.WriteLine($"Nome:     {pessoa.Nome}");
-            Console.WriteLine($"Endereço: {pessoa.Endereco}");
-            Console.WriteLine($"Telefone: {pessoa.Telefone}");
-            Console.WriteLine();
-            
-        }
+
+        foreach (var pessoa in listPessoas)        
+            Console.WriteLine(pessoa.ToString()); 
+        
         Console.Write("> Tecle para limpar");
         Console.ReadKey();
         Console.Clear();
